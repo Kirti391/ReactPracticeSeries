@@ -132,8 +132,8 @@ console.log(jobs);
         return <Card name={ele}/>;
       })} */}
 
-  {jobs.map(function(ele){
-       return <Card company={ele.name} post={ele.post} tag1={ele.tag1} tag2={ele.tag2} pay={ele.pay} location={ele.location} date={ele.datePosted} logo={ele.brandLogo}/>
+  {jobs.map(function(ele,idx){
+       return <div key={idx}><Card  company={ele.name} post={ele.post} tag1={ele.tag1} tag2={ele.tag2} pay={ele.pay} location={ele.location} date={ele.datePosted} logo={ele.brandLogo}/></div>
   })}
 
 
