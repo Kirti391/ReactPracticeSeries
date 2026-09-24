@@ -1,0 +1,17 @@
+
+.header{
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.btn{
+  background-color: rgb(3, 72, 61);
+  padding: 5px 10px;
+  color: aliceblue;
+   border-radius: 5px;
+  margin:5px ;
+}
