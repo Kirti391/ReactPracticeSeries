@@ -29,7 +29,7 @@ const App = () => {
     console.log(copyTask);
     console.log(copyTask[idx]);
     copyTask.splice(idx, 1);
-    setTask(copyTask)
+    setTask(copyTask);
   }
   return (
     <div className=" h-screen bg-black text-white lg:flex">
@@ -81,7 +81,7 @@ const App = () => {
                 deleteNote(idx)
               }} className='absolute cursor-pointer active:scale-110 top-5 right-5 bg-red-400 text-xs p-1 rounded-full'><X size={16} strokeWidth={2.75} /></h2>
               <h3 className='text-xl font-bold leading-tight pb-2 break-words'>{e.title}</h3>
-              <p className=' leading-tight font-medium text-gray-500 break-words overflow-y-auto '>{e.details}</p>
+              <p className=' leading-tight font-semibold text-gray-400 break-words overflow-y-auto '>{e.details}</p>
             </div>
           })}
         </div>
