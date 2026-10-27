@@ -5,13 +5,19 @@ body{
 }
 .nav{
   display: flex;
-  background-color: lightseagreen;
+
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
   color:white;
 }
 
+.light{
+    background-color: lightseagreen;
+}
+.dark{
+  background-color: darkslategray;
+}
 .nav2{
   display: flex;
   gap:30px;

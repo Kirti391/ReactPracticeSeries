@@ -1,9 +1,14 @@
 import React from 'react'
-
-const ThemeContext = () => {
+import { useState } from 'react'
+import { createContext } from 'react'
+export const ThemeDataContext=createContext()
+const ThemeContext = (props) => {
+   const [theme, setTheme]=useState('light')
   return (
     <div>
-      ThemeContext
+      <ThemeDataContext.Provider value={[theme, setTheme]}>
+        {props.children}
+      </ThemeDataContext.Provider>
     </div>
   )
 }

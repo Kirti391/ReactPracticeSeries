@@ -1,14 +1,22 @@
 import React from 'react'
 import Nav2 from './Nav2'
-const Navbar = (props) => {
-    console.log(props.children);
+import { useContext } from 'react';
+import { ThemeDataContext } from './ThemeContext';
+const Navbar = () => { 
+    // console.log(props.children);
+    const [theme]=useContext(ThemeDataContext);
+    // console.log(data);
+
+
 
   return (
-    <div className='nav '>
+    <div className={theme}>
        
-      <h2>Context API</h2> 
-      <h2>{props.children[0]}</h2>
-       <Nav2 theme={props.theme}/>
+      {/* <h2>{data}</h2>  */}
+      {/* <h2>{props.children[0]}</h2> */}
+       {/* <Nav2 theme={props.theme}/> */}
+
+       <Nav2/>
     </div>
   )
 }
