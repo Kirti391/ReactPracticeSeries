@@ -10,7 +10,9 @@ const Navbar = () => {
        <a href="/contact" className='text-lg font-bold'>Contact</a> */}
        <Link to='/' className='text-lg font-bold'>Home</Link>
        <Link to='/about' className='text-lg font-bold'>About</Link>
-       <Link to='/contact' className='text-lg font-bold'>Contact</Link>
+     <Link to='/courses' className='text-lg font-bold'>Courses</Link>
+       <Link to='/product' className='text-lg font-bold'>Product</Link> 
+        <Link to='/contact' className='text-lg font-bold'>Contact</Link>
       </div>
     </div>
   )
