@@ -61,7 +61,7 @@ const App = () => {
   const car=JSON.parse(localStorage.getItem('cars'))
   console.log(car);
   console.log(typeof(car))
-
+  localStorage.clear()
   return (
     <>
       Hi there!
