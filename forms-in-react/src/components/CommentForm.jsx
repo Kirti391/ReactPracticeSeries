@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Comments from './Comments';
+import {useFormik} from 'formik';
 
 function CommentForm({addNewComment}) {
     let [formData, setFormData] = useState({
@@ -13,7 +14,17 @@ function CommentForm({addNewComment}) {
             return { ...currData, [e.target.name]: e.target.value }
         })
     }
+
+    let [isValid, setIsValid]=useState(true);
     let handleSubmitEvent = (e) => {
+
+        if(!formData.username){
+            console.log("username is null");
+            setIsValid(false);
+            e.preventDefault();
+            return;
+        }
+
         console.log(formData);
         addNewComment(formData);
         e.preventDefault();
@@ -30,6 +41,7 @@ function CommentForm({addNewComment}) {
             <form action="" onSubmit={handleSubmitEvent}>
                 <label htmlFor="username">Username</label>
                 <input id="username" name="username" type="text" placeholder='Enter username' value={formData.username} onChange={handleInputChange} />
+                {!isValid && <p style={{color:"red"}}>Username cannot be empty</p>}
                 <br></br>
                 <br></br>
                 <br></br>
