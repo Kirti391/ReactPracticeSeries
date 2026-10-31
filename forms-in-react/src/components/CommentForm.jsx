@@ -58,7 +58,7 @@ function CommentForm({addNewComment}) {
         e.preventDefault();
         setFormData({
             username: "",
-            remarks: "",
+            remarks: "", 
             rating: 5,
 
         })
