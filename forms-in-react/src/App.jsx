@@ -3,6 +3,7 @@ import Form from './components/Form'
 import CommentForm from './components/CommentForm'
 import Comments from './components/Comments'
 import Counter from './components/Counter'
+import Joker from './components/Joker'
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       {/* <Form/> */}
       {/* <CommentForm/> */}
       {/* <Comments/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Joker/>
     </div>
   )
 }
